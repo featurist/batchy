@@ -1,0 +1,27 @@
+{
+  "name": "batchy",
+  "version": "0.0.1",
+  "description": "for running asynchronous tasks in batches",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "pogo": "~0.4.3",
+    "should": "~1.2.2"
+  },
+  "devDependencies": {
+    "mocha": "~1.11.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "make": "make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/featurist/batchy.git"
+  },
+  "author": "timmacfarlane@gmail.com",
+  "license": "BSD",
+  "gitHead": "69b540d35d486204890928b6df3a0d2a87f952fa"
+}
