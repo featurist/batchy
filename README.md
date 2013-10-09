@@ -45,20 +45,20 @@ Batchy will batch requests up into groups of 10, or into time segments of 140ms,
 
 # API
 
-*batchy(map, [options])*
+    var mapItem = batchy(map, [options])
 
 where:
 
-* *map* - a function accepting *items* and *callback*. The function is to process the items and call the callback. The result (second argument to *callback*) is the list of mapped items. This function can also be synchronous if you omit the *callback* parameter, in which case just `return` the mapped items.
-* *options* - can contain:
-    * *size* - the maximum size of each batch (default 10)
-    * *timeout* - the maximum time to wait for items to batch (default 140ms)
+* `map(items, callback)` - a function accepting *items* and *callback*. The function is to process the items and call the callback. The result (second argument to *callback*) is the list of mapped items. This function can also be synchronous if you omit the *callback* parameter, in which case just `return` the mapped items.
+* `options` - can contain:
+    * `size` - the maximum size of each batch (default 10)
+    * `timeout` - the maximum time to wait for items to batch (default 140ms)
 
 It returns a new function that looks like this:
 
-*mapItem(item, callback)*
+    mapItem(item, callback)
 
 where:
 
-* *item* - an item to map
-* *callback* - a function that will be called when the item is mapped, signature *(error, mappedItem)*.
+* `item` - an item to map
+* `callback(error, mappedItem)` - a function that will be called when the item is eventually mapped.
